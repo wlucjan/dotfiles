@@ -1,0 +1,10 @@
+" -------------------------------------
+" |        Vim GUI settings           |
+" -------------------------------------
+
+" Font settings
+set anti
+
+" Default window size
+set columns=150
+set lines=50

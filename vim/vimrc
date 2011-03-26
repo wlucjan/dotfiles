@@ -1,0 +1,91 @@
+" ------------------------------------------------------
+" |            VIM settings non-GUI-specific           |
+" ------------------------------------------------------
+
+" ----------
+" General
+" ----------
+set nocompatible                " enable all features
+set number          		    " show line numbers
+
+" ----------
+" Line wrapping
+" ----------
+set wrap            		    " wrap too long lines
+set linebreak			        " don't wrap words
+
+" ----------
+" Indentation
+" ----------
+set autoindent      		    " guess indentation
+set tabstop=4       		    " tab is equal to 4 spaces
+set shiftwidth=4    		    " indentation by 4 characters
+set expandtab       		    " use spaces instead of tab
+set backspace=indent,eol,start 	" powerfull backspaces
+
+" ----------
+" Command line
+" ----------
+set wildchar=<Tab>  		    " expand the command line using tab
+
+
+" ----------
+" Status line
+" ----------
+set showcmd			                " show partial commands in bottom line
+set ruler			                " show ruler
+"match LongLineWarning '\%120v.*'    " Error format when a line is longer than 120
+
+" ----------
+" Folding
+" ----------
+set foldmethod=marker 		    " fold using markers {{{ like this }}}
+
+" ----------
+" Search
+" ----------
+set hlsearch			        " highlight search terms
+set incsearch			        " jump to the matches while typing
+set ignorecase			        " ignore case while searching
+
+" ----------
+" History & Undo
+" ----------
+set history=50
+set undolevels=1000 		    " 1000 undo levels
+
+" ----------
+" Buffer
+" ----------
+set autowrite			        " write before hiding a buffer
+
+" ----------
+" Filetype
+" ----------
+filetype plugin indent on	    " auto-detect the filetype
+
+" ----------
+" Syntax
+" ----------
+syntax on			            " syntax highlight
+set showmatch			        " show matching braces
+
+" ----------
+" Editor
+" ----------
+set background=dark          	" background set to dark 
+colorscheme ir_black
+" When editing a file, always jump to the last known cursor position.
+" Don't do it when the position is invalid or when inside an event handler
+" (happens when dropping a file on gvim).
+autocmd BufReadPost *
+  \ if line("'\"") > 0 && line("'\"") <= line("$") |
+  \   exe "normal g`\"" |
+  \ endif
+
+
+
+" ----------
+" Autocompletion
+" ----------
+" set completeopt=longest,menuone " choose longest common text and show also if one match only
