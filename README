@@ -1,7 +1,14 @@
 VIM
 
 Plugins
-- Supertab
+- supertab
 - NERDTree
-- Surround
+- surround
+- repeat
+- snipmate
+- matchit
+- ragtag
+- taglist
+- phpcs
+- debugger
     
