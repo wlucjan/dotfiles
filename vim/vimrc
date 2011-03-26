@@ -89,3 +89,12 @@ autocmd BufReadPost *
 " Autocompletion
 " ----------
 " set completeopt=longest,menuone " choose longest common text and show also if one match only
+
+"--------------------------
+" PLUGIN specific config
+" -------------------------
+
+"------------------
+"     NERDTree
+"------------------
+autocmd VimEnter * exe 'NERDTree' | wincmd l        " auto-launch NERDTree on start
