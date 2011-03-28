@@ -98,3 +98,11 @@ autocmd BufReadPost *
 "     NERDTree
 "------------------
 autocmd VimEnter * exe 'NERDTree' | wincmd l        " auto-launch NERDTree on start
+
+"------------------
+"     MiniBufExplorer
+"------------------
+let g:miniBufExplMapWindowNavVim = 1 
+let g:miniBufExplMapWindowNavArrows = 1 
+let g:miniBufExplMapCTabSwitchBufs = 1 
+let g:miniBufExplModSelTarget = 1 
