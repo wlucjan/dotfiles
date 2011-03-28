@@ -1,6 +1,8 @@
 VIM
+===
 
 Plugins
+-------
 - supertab
 - NERDTree
     ? - shows help
