@@ -74,7 +74,7 @@ set showmatch			        " show matching braces
 " Editor
 " ----------
 set background=dark          	" background set to dark 
-colorscheme ir_black
+colorscheme vilight
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
 " (happens when dropping a file on gvim).
