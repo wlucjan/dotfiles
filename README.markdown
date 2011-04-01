@@ -33,3 +33,8 @@ Plugins
     ctrl+h/j/k/l - navigates between windows  
     ctrl+arrows - navigate between windows  
     ctrl+tab - navigate between buffers
+
+- svn
+
+    gl - svn blame for highlighed area
+    F3 - svn blame for full file

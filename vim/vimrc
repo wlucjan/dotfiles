@@ -83,6 +83,11 @@ autocmd BufReadPost *
   \   exe "normal g`\"" |
   \ endif
 
+" ----------
+" Directory
+" ----------
+" Sets path to directory buffer was loaded from
+autocmd BufEnter * lcd %:p:h
 
 
 " ----------
