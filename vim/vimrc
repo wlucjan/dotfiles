@@ -1,113 +1,28 @@
-" ------------------------------------------------------
-" |            VIM settings non-GUI-specific           |
-" ------------------------------------------------------
+" =====================================================
+" Author: Lucjan Wilczewski
+" Version: 2.0
+" Inspired by: 
+"   https://github.com/mutewinter/dot_vim 
+"   https://github.com/zaiste/vimified
+" =====================================================
 
-" ----------
-" General
-" ----------
-set nocompatible                " enable all features
-set number          		    " show line numbers
+" All plugins are instralled with Vungle
+source ~/.vim/vundle.vim
 
-" ----------
-" Line wrapping
-" ----------
-set wrap            		    " wrap too long lines
-set linebreak			        " don't wrap words
+" Automatically detect file types. (must turn on after Vundle)
+filetype plugin indent on
 
-" ----------
-" Indentation
-" ----------
-set autoindent      		    " guess indentation
-set tabstop=4       		    " tab is equal to 4 spaces
-set shiftwidth=4    		    " indentation by 4 characters
-set expandtab       		    " use spaces instead of tab
-set backspace=indent,eol,start 	" powerfull backspaces
-
-" ----------
-" Command line
-" ----------
-set wildchar=<Tab>  		    " expand the command line using tab
-
-
-" ----------
-" Status line
-" ----------
-set showcmd			                " show partial commands in bottom line
-set ruler			                " show ruler
-"match LongLineWarning '\%120v.*'    " Error format when a line is longer than 120
-
-" ----------
-" Folding
-" ----------
-set foldmethod=marker 		    " fold using markers {{{ like this }}}
-
-" ----------
-" Search
-" ----------
-set hlsearch			        " highlight search terms
-set incsearch			        " jump to the matches while typing
-set ignorecase			        " ignore case while searching
-
-" ----------
-" History & Undo
-" ----------
-set history=50
-set undolevels=1000 		    " 1000 undo levels
-
-" ----------
-" Buffer
-" ----------
-set autowrite			        " write before hiding a buffer
-
-" ----------
-" Filetype
-" ----------
-filetype plugin indent on	    " auto-detect the filetype
-
-" ----------
-" Syntax
-" ----------
-syntax on			            " syntax highlight
-set showmatch			        " show matching braces
-
-" ----------
-" Editor
-" ----------
-set background=dark          	" background set to dark 
-colorscheme vilight
-" When editing a file, always jump to the last known cursor position.
-" Don't do it when the position is invalid or when inside an event handler
-" (happens when dropping a file on gvim).
-autocmd BufReadPost *
-  \ if line("'\"") > 0 && line("'\"") <= line("$") |
-  \   exe "normal g`\"" |
-  \ endif
-
-" ----------
-" Directory
-" ----------
-" Sets path to directory buffer was loaded from
-autocmd BufEnter * lcd %:p:h
-
-
-" ----------
-" Autocompletion
-" ----------
-" set completeopt=longest,menuone " choose longest common text and show also if one match only
-
-"--------------------------
-" PLUGIN specific config
-" -------------------------
-
-"------------------
-"     NERDTree
-"------------------
-autocmd VimEnter * exe 'NERDTree' | wincmd l        " auto-launch NERDTree on start
-
-"------------------
-"     MiniBufExplorer
-"------------------
-let g:miniBufExplMapWindowNavVim = 1 
-let g:miniBufExplMapWindowNavArrows = 1 
-let g:miniBufExplMapCTabSwitchBufs = 1 
-let g:miniBufExplModSelTarget = 1 
+" Platform (Windows, Mac, etc.) configuration.
+source ~/.vim/platforms.vim
+" All of the Vim configuration.
+source ~/.vim/config.vim
+" New commands
+source ~/.vim/commands.vim
+" All hotkeys, not dependant on plugins, are mapped here.
+source ~/.vim/mappings.vim
+" Plugin-specific configuration.
+source ~/.vim/plugin_config.vim
+" Small custom functions.
+source ~/.vim/functions.vim
+" Auto commands.
+source ~/.vim/autocmds.vim
