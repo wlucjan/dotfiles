@@ -108,6 +108,8 @@ Bundle 'wavded/vim-stylus'
 Bundle 'tpope/vim-cucumber'
 Bundle 'jcf/vim-latex'
 Bundle 'vim-scripts/taglist.vim'
+"   Puppet
+Bundle 'rodjek/vim-puppet'
 
 " MatchIt
 Bundle 'matchit.zip'
